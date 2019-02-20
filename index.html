@@ -22,13 +22,15 @@
     }
 
     .text-center {
-      text-align: center
+      text-align: center;
+     
+    }
+    .calculator-content {
+       background-color: rgb(195, 223, 231);
+      box-shadow:  5px 5px 1px #7ea1ee;
     }
 
-    .table-content {
-      background-color: rgb(202, 217, 245);
-      width: 900px;
-    }
+   
   </style>
 </head>
 
@@ -42,79 +44,89 @@
   </div>
   <br>
   <div class=" container form-group">
+
     <div class="row">
-      <div class="col-md-2">
-        <b>ກໍານົດເວລາໃນການຄໍານວນ</b>
+      <div class="col-md-2 col-sm-2 col-12">
+        <b>
+          ກໍານົດເວລາໃນການຄໍານວນ
+        </b>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-5 col-sm-8 col-8">
         <input type="number" value="5" id="calculatTime" class="form-control">
       </div>
-      <div class="col-md-1">
+      <div class="col-md-2 col-sm-2 col-2">
         ວິນາທີ
       </div>
     </div>
   </div>
   <br>
-  <div style="margin-left: 10%; margin-top: 2%">
-    <div>
-      <b>ເລືອກຫຼັກຕົວຕັ້ງໃນການຄໍານວນ : </b> &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="100" id="type_2" name="operatingtyType" class="pointer" checked> ຫຼັກສິບ &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="1000" id="type_3" name="operatingtyType" class="pointer"> ຫຼັກຮ້ອຍ &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="10000" id="type_4" name="operatingtyType" class="pointer"> ຫຼັກພັນ &nbsp;&nbsp;&nbsp;
-    </div>
-    <br>
+  <div class="row">
+    <div class="col-md-3 col-sm-3 col-12">
+      <div style="margin-left: 10%; margin-top: 2%">
+        <div>
+          <b>ເລືອກຫຼັກຕົວຕັ້ງໃນການຄໍານວນ : </b>
+          <br>
+          <input type="radio" value="100" id="type_2" name="operatingtyType" class="pointer" checked> ຫຼັກສິບ
+          <br>
+          <input type="radio" value="1000" id="type_3" name="operatingtyType" class="pointer"> ຫຼັກຮ້ອຍ
+          <br>
+          <input type="radio" value="10000" id="type_4" name="operatingtyType" class="pointer"> ຫຼັກພັນ
 
-    <div>
-      <b>ເລືອກຮູບແບບການຄໍານວນ : </b> &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="1" id="plus" name="operatingChoice" checked class="pointer"> + &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="2" id="minus" name="operatingChoice" class="pointer"> - &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="3" id="multiply" name="operatingChoice" class="pointer"> x &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="4" id="divis" name="operatingChoice" class="pointer"> / &nbsp;&nbsp;&nbsp;
-      <input type="radio" value="5" id="mode" name="operatingChoice" class="pointer"> % &nbsp;&nbsp;&nbsp;
-    </div>
-    <br>
+          <br>
+          <br>
 
-    <div class="table-content">
+          <b>ເລືອກຮູບແບບການຄໍານວນ : </b>
+          <br>
+          <input type="radio" value="1" id="plus" name="operatingChoice" checked class="pointer"> +
+          <br>
+          <input type="radio" value="2" id="minus" name="operatingChoice" class="pointer"> -
+          <br>
+          <input type="radio" value="3" id="multiply" name="operatingChoice" class="pointer"> x
+          <br>
+          <input type="radio" value="4" id="divis" name="operatingChoice" class="pointer"> /
+          <br>
+          <input type="radio" value="5" id="mode" name="operatingChoice" class="pointer"> %
+        </div>
+        <br>
+
+      </div>
+    </div>
+    <div class="col-md-9 col-sm-9 col-12 calculator-content">
       <br>
-      <table>
-        <thead>
-          <th>
-            <div class="tb-header">ສໍານວນທີ 1</div>
-          </th>
-          <th>
-            <div class="tb-header">ສໍານວນທີ 2</div>
-          </th>
-          <th>
-            <div style="width: 30px;"></div>
-          </th>
-          <th>
-            <div class="tb-header">ຜົນການຄໍານວນ</div>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-          </tr>
-          <tr>
-            <td class="text-center">
-              <span id="demo1" style="font-size:24px"></span>
-            </td>
-            <td class="text-center">
-              <span id="demo2" style="font-size:24px; margin-left:5%"></span>
-            </td>
-            <td class="text-center"> = </td>
-            <td class="text-center">
-              <span id="demo3" style="font-size:24px; margin-left:5%"></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="row">
+
+        <div class="col-md-2 col-sm-2 col-4 text-center">
+          <b>ສໍານວນທີ 1</b>
+          <br>
+          <br>
+          <span id="demo1" style="font-size:28px; font-weight: bold"></span>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-4 text-center">
+          <b>ສໍານວນທີ 2</b>
+          <br>
+          <br>
+          <span id="demo2" style="font-size:28px; font-weight: bold; margin-left:5%"></span>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-1 text-center">
+          <br>
+          <br>
+          <span style="font-size:28px; font-weight: bold;">
+            =
+          </span>
+        </div>
+
+        <div class="col-md-2 col-sm-2 col-3 text-center">
+          <b>ຜົນຄໍານວນ</b>
+          <br>
+          <br>
+          <span id="demo3" style="font-size:28px; font-weight: bold; margin-left:5%"></span>
+        </div>
+
+      </div>
 
     </div>
-
   </div>
   <br>
 
@@ -125,10 +137,8 @@
   </div>
 
   <div style="text-align: center; margin-bottom: 20%">
-    <button class="btn btn-success" onclick="myFunction()" style="font-size: 20px; font-weight: bold; color: red; width: 20%">Start</button>
+    <button class="btn btn-success" onclick="myFunction()" style="font-size: 20px; font-weight: bold; color: red; width: 20%">ຊຸມເລກ</button>
   </div>
-
-
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -173,6 +183,7 @@
     }
 
     function myFunction() {
+      document.getElementById('demo3').innerHTML = '';
       var rdo_operatingType = document.getElementsByName('operatingtyType');
       var rdo_operatingChoice = document.getElementsByName('operatingChoice');
 
